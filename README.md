@@ -57,5 +57,3 @@ This app uses Tailwind CSS for styling out of the box. You can easily customize 
 Built with ❤️ by Jericho and Ram using React Router.
 
 ---
-
-Let me know if you want to add instructions for connecting a backend (like Flask), database setup (PostgreSQL), or live demo links!
