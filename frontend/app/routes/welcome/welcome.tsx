@@ -1,10 +1,6 @@
-import logoDark from "./logo-dark.svg";
-import logoLight from "./logo-light.svg";
-
 export function Welcome() {
   return (
     <main className="w-screen h-screen relative overflow-hidden">
-      {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -12,24 +8,20 @@ export function Welcome() {
         }}
       ></div>
 
-      {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
 
-      {/* Foreground: Two columns */}
       <div className="relative z-10 h-full w-full flex">
-        {/* LEFT: Optional text or leave empty */}
         <div className="hidden md:flex w-1/2 items-center justify-center p-10 text-white">
           <div>
-            <h1 className="text-4xl font-bold mb-4">Track Your Subscriptions</h1>
-            <p className="text-lg">Simple. Clean. Efficient.</p>
+            <h1 className="text-7xl font-bold mb-4">Track Your Subscriptions</h1>
+            <p className="text-2xl">Simple. Clean. Efficient.</p>
           </div>
         </div>
 
-        {/* RIGHT: Login Panel */}
         <div className="w-full md:w-1/2 ml-auto flex items-center justify-center p-6">
-          <div className="w-full max-w-md bg-white/60 backdrop-blur-md p-8 rounded-xl shadow-xl min-h-[85vh] flex flex-col justify-center">
+          <div className="w-full max-w-md bg-white/70 backdrop-blur-md p-8 rounded-xl shadow-xl min-h-[85vh] flex flex-col justify-center">
 
-            <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">Welcome Back</h2>
+            <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">Welcome Back!</h2>
 
             <form className="flex flex-col gap-4">
               <input
@@ -44,16 +36,32 @@ export function Welcome() {
               />
               <button
                 type="submit"
-                className="bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300"
+                className="bg-red-600 text-white py-3 rounded-lg hover:bg-red-900 transition duration-300"
               >
                 Login
               </button>
+              <button
+                type="button"
+                className="flex items-center justify-center gap-2 border border-black text-black py-3 rounded-lg bg-white hover:bg-gray-400 transition duration-300"
+              >
+                <img
+                  src="https://www.svgrepo.com/show/475656/google-color.svg"
+                  alt="Google"
+                  className="w-5 h-5"
+                />
+                Login with Google
+              </button>
+              <p className="mt-6 text-center text-base text-gray-800">
+              No account yet?{" "}
+              <a href="/signup" className="text-blue-600 hover:underline text-base">
+                Sign Up here
+              </a>
+            </p>
             </form>
           </div>
         </div>
       </div>
     </main>
-
   );
 }
 
