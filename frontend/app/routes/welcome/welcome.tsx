@@ -1,6 +1,11 @@
 import logo from './logo.png'
+import { Navigate, useNavigate } from "react-router";
 
 export function Welcome() {
+  const navigate = useNavigate();
+  const handleRedirect = () => {
+    navigate("./login" );
+  };
   return (
     <main className="w-screen h-screen bg-gradient-to-b from-white to-[#FFE485] relative overflow-hidden">
       <div className="w-full fixed top-0 left-0 bg-white text-[#74CFDE] shadow-md z-50">
@@ -27,11 +32,11 @@ export function Welcome() {
         </div>
         <div className='flex flex-row items-center justify-center mt-20'>
           <button className='w-40 bg-[#74CFDE] text-white px-10 py-2 rounded-2xl hover:bg-[#5fb6c8] hover:shadow-lg 
-               transition duration-300 ease-in-out'
-          onClick={() => alert('Button clicked!')}
+               transition duration-300 ease-in-out cursor-pointer'
+          onClick={handleRedirect}
           >Login</button>
           <button className='w-40 bg-transparent text-black ml-10 border px-10 py-2 rounded-2xl border-[#74CFDE] hover:bg-white hover:shadow-lg 
-               transition duration-300 ease-in-out'>Sign Up</button>
+               transition duration-300 ease-in-out cursor-pointer'>Sign Up</button>
         </div>
       </div>
     </main>
