@@ -5,6 +5,16 @@ node_modules/
 .react-router/
 build/
 
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+
 .env
 .env.local
 .env.*.local
