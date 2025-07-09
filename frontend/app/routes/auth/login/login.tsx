@@ -8,6 +8,9 @@ export default function LoginPage() {
     const handleRedirecttoSignUp = () => {
         navigate("/signup")
     };
+    const handleRedirecttoHomeTemp = () => {
+        navigate("/home")
+    }
 
     const [showPassword, setShowPassword] = useState(false);
     const togglePasswordVisibility = () => setShowPassword(!showPassword);
@@ -51,7 +54,8 @@ export default function LoginPage() {
                         </button>
                     </div>
                     <div className='flex justify-center'>
-                        <button className='cursor-pointer bg-[#74CFDE] rounded-3xl w-60 py-2 mt-4 px-5 hover:bg-[#5fb6c8] hover:shadow-lg transition duration-300 ease-in-out'>Login</button>
+                        <button className='cursor-pointer bg-[#74CFDE] rounded-3xl w-60 py-2 mt-4 px-5 hover:bg-[#5fb6c8] hover:shadow-lg transition duration-300 ease-in-out'
+                        onClick={handleRedirecttoHomeTemp}>Login</button>
                     </div>
                     <div className='flex justify-center'>
                         <button
