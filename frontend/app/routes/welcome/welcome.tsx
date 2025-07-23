@@ -1,4 +1,7 @@
 import logo from '../../images/logo.png'
+import notifIcon from '../../icons/notif.png'
+import dashIcon from '../../icons/dash.png'
+import gearIcon from '../../icons/gear.png'
 import { Navigate, useNavigate } from "react-router";
 
 export function Welcome() {
@@ -17,20 +20,24 @@ export function Welcome() {
             <img src={logo} alt="Logo" className="h-10 w-10" />
             <span className='text-3xl font-semibold'>SubPiece</span>
           </div>
-          <div className='text-sm sm:text-base lg:text-xl ml-250 whitespace-nowrap font-semibold text-black'>Track Your Subscriptions Seamlessly</div>
+          <div className='text-sm sm:text-base lg:text-xl ml-340 whitespace-nowrap font-semibold text-black'>Track Your Subscriptions Seamlessly</div>
         </div>
       </div>
       <div className='mt-30 px-6 flex flex-col'>
-        <h1 className='text-3xl font-bold text-gray-800 text-center'>Welcome to Subpiece</h1>
+        <h1 className='text-5xl font-bold text-gray-800 text-center'>Welcome to SubPiece!</h1>
         <p className='text-xl mt-5 text-black text-center'>Your one stop solution to manage all your subscriptions with ease and protection</p>
-        <div className='ml-90 mt-15 flex flex-row'>
-          <img src='https://plus.unsplash.com/premium_vector-1736944142257-97b07b0e44d3?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt="Example Image" className="h-50 w-50 object-cover rounded-lg" />
-          <div className='flex flex-col'>
-            <span className='text-lg text-black ml-50 mt-2'>Never forget a subscription again.</span>
-            <span className='text-lg text-black ml-50 mt-2'>See where your money goes every month.</span>
-            <span className='text-lg text-black ml-50 mt-2'>One dashboard. All your subscriptions.</span>
-            <span className='text-lg text-black ml-50 mt-2'>Stay ahead of charges with smart reminders.</span>
-            <span className='text-lg text-black ml-50 mt-2'>Take control of your recurring expenses.</span>
+        <div className='ml-75 mt-15 flex gap-x-8 flex-row'>
+          <div className='w-100 py-5 flex flex-col bg-gray-50 border border-black rounded-md'> 
+              <img src={notifIcon} className='w-40 h-40 self-center'></img>
+              <span className='text-lg font-bold text-center text-black mt-2'>Never forget a subscription again.</span>
+          </div>
+          <div className='w-100 py-5 flex flex-col bg-gray-50 border border-black rounded-md'> 
+              <img src={dashIcon} className='w-40 h-40 self-center'></img>
+              <span className='text-lg font-bold text-center text-black mt-2'>One dashboard. All your subscriptions.</span>
+          </div>
+          <div className='w-100 py-5 flex flex-col bg-gray-50 border border-black rounded-md'> 
+              <img src={gearIcon} className='w-40 h-40 self-center'></img>
+              <span className='text-lg font-bold text-center text-black mt-2'>Take control of your recurring expenses.</span>
           </div>
         </div>
         <div className='flex flex-row items-center justify-center mt-20'>
