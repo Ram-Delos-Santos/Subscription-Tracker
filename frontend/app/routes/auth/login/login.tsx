@@ -1,7 +1,7 @@
 import logo from '../../../images/logo.png';
 import bg from '../../../images/login-bg.jpg'
 import { Navigate, useNavigate } from "react-router";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function LoginPage() {
     const navigate = useNavigate();
@@ -14,6 +14,10 @@ export default function LoginPage() {
 
     const [showPassword, setShowPassword] = useState(false);
     const togglePasswordVisibility = () => setShowPassword(!showPassword);
+
+    useEffect(() => {
+    document.title = "Login";
+    }, []);
 
     return (
         <main className="w-screen h-screen relative overflow-hidden">
