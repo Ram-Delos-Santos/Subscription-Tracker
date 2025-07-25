@@ -1,6 +1,6 @@
 import logo from '../../../images/logo.png';
 import bg from '../../../images/signup-bg.jpg'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Navigate, useNavigate } from "react-router";
 
 export default function SignupPage() {
@@ -13,6 +13,11 @@ export default function SignupPage() {
     const handleRedirecttoLogin = () => {
         navigate("/login")
     };
+
+    useEffect(() => {
+    document.title = "Sign Up";
+    }, []);
+
     return (
         <main className="w-screen h-screen relative overflow-hidden">
             <div className="absolute inset-0 blur-xl scale-110 bg-cover bg-center" style={{ backgroundImage: `url(${bg})` }} />
